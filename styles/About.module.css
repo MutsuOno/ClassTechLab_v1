@@ -1,0 +1,16 @@
+.about {
+  margin-top: 80px;
+}
+
+.aboutDescription {
+  font-size: 0.9rem;
+}
+
+.about h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.about h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}

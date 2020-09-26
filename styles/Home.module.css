@@ -1,0 +1,77 @@
+/*******************************
+  search
+*******************************/
+.header {
+  padding-top: 50px;
+}
+
+.search {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 20px 10px 10px;
+}
+
+.search h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.search input[type="text"] {
+  height: 2.8rem;
+}
+
+.search h3 {
+  margin-top: 18px;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.count-text {
+  font-size: 0.9rem;
+}
+
+/*******************************
+  search result
+*******************************/
+.date {
+  color: #007f9b;
+  font-size: 0.8em;
+}
+.title {
+  font-size: 1.1rem;
+  line-height: 1.4em;
+}
+.author {
+  font-size: 0.8em;
+}
+.description {
+  font-size: 0.9em;
+}
+.url {
+  font-size: 0.8rem;
+}
+.searchResult img {
+  padding: 16px;
+}
+@media only screen and (max-width: 651px) {
+  .searchResult img {
+    margin: 0 auto;
+  }
+}
+
+.cardBody a {
+  color: #0f7991;
+  border-bottom: 1px solid #0f7991;
+}
+
+/*******************************
+  Article
+*******************************/
+.content {
+  margin-top: 80px;
+  padding-top: 20px;
+}
+
+.cardImg {
+  height: 280px;
+}

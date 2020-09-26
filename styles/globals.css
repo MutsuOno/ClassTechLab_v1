@@ -1,0 +1,68 @@
+html,
+body,
+main {
+  background-color: #4bacc6;
+  font-family: sans-serif;
+  color: #2c2c2c;
+  line-height: 1.4em;
+}
+
+.navbar-light .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0);
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.header-text {
+  color: #fff;
+  font-size: 1.2rem;
+}
+@media only screen and (max-width: 651px) {
+  .header-text {
+    font-size: 1rem;
+  }
+}
+
+.btn-recruit {
+  background: #fff;
+  color: #4bacc6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+  height: 3.8rem;
+}
+.btn-recruit:hover,
+.btn-recruit:focus,
+.btn-recruit:active {
+  color: #35798b;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 651px) {
+  .btn-recruit {
+    font-size: 1rem;
+    height: 3rem;
+  }
+}
+
+.btn-search {
+  background: #4bacc6;
+  color: #fff;
+  height: 48px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1.1rem;
+}
+.btn-search:hover,
+.btn-search:focus,
+.btn-search:active {
+  color: #35798b;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.tag {
+  background: #ec518d;
+  color: #fff;
+  font-size: 0.6rem;
+  margin-right: 0.4rem;
+  margin-top: 0.2rem;
+}
