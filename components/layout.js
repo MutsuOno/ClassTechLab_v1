@@ -8,7 +8,17 @@ export default function Layout({ children }) {
       <Head>
         <title>ClassTech Lab</title>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="description" content="" />
+        <meta name="description" content="教員が、教室のEdTechに挑戦するラボ" />
+        <meta property="og:url" content="https://classtech-lab.com/" />
+        <meta property="og:title" content="ClassTech Lab" />
+        <meta
+          property="og:description"
+          content="教員が、教室のEdTechに挑戦するラボ"
+        />
+        <meta
+          property="og:image"
+          content="https://classtech-lab.com/images/ogp.svg"
+        />
       </Head>
 
       <Navbar
