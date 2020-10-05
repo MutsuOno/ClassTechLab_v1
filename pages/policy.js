@@ -8,7 +8,9 @@ export default function Policy() {
       <Container>
         <Card className={styles.about}>
           <Card.Body>
-            <Card.Title className="mt-3 mb-4">利用規約</Card.Title>
+            <Card.Title className="mt-3 mb-4">
+              <h2>利用規約</h2>
+            </Card.Title>
             <div className={styles.aboutDescription}>
               <p>
                 Class Tech

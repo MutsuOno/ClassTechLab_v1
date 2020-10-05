@@ -3,8 +3,8 @@ body,
 main {
   background-color: #4bacc6;
   font-family: sans-serif;
-  color: #2c2c2c;
-  line-height: 1.4em;
+  color: #333;
+  line-height: 1.5rem;
 }
 
 .navbar-light .navbar-toggler {
