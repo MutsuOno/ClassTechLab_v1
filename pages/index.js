@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { ArticleContext } from "../context/articleContext";
 import { Container, Card } from "react-bootstrap";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -7,6 +8,10 @@ import { getAllArticle, getSearchArticles } from "../lib/articles";
 
 export default function Home() {
   const [articles, setArticle] = useState([]);
+  const { searchWord, setWord } = useContext(ArticleContext);
+  const { category, setCategory } = useContext(ArticleContext);
+  const { school, setSchool } = useContext(ArticleContext);
+  const { storedArticles, setStoredArticles } = useContext(ArticleContext);
 
   const showAll = async () => {
     setArticle(await getAllArticle());
@@ -14,7 +19,17 @@ export default function Home() {
 
   const search = async (keyword, category, school_type) => {
     event.preventDefault();
-    setArticle(await getSearchArticles(keyword, category, school_type));
+    const searchArticles = await getSearchArticles(
+      keyword,
+      category,
+      school_type
+    );
+    setArticle(searchArticles);
+    // 保持
+    setWord(keyword);
+    setCategory(category);
+    setSchool(school_type);
+    setStoredArticles(searchArticles);
   };
 
   const handleRecruit = () => {
@@ -22,7 +37,17 @@ export default function Home() {
   };
 
   useEffect(() => {
-    showAll();
+    if (storedArticles.length == 0) {
+      document.searchForm.keyword.value = "";
+      document.searchForm.select1.value = "すべて";
+      document.searchForm.select2.value = "すべて";
+      showAll();
+    } else {
+      document.searchForm.keyword.value = searchWord;
+      document.searchForm.select1.value = category;
+      document.searchForm.select2.value = school;
+      setArticle(storedArticles);
+    }
   }, []);
 
   return (
