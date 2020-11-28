@@ -25,11 +25,23 @@ export default function Article({ article }) {
     <Layout>
       <Container>
         <Card className={styles.content}>
-          <img
-            className={styles.cardImg}
-            src="../images/dummy.svg"
-            alt="thumbnail"
-          />
+          {article.field.image_url &&
+          !article.field.image_url.includes("drive") ? (
+            <img
+              className="img-fluid mx-auto"
+              style={{ height: 300 }}
+              src={article.field.image_url}
+              alt="thumbnail"
+            />
+          ) : (
+            <img
+              className="img-fluid mx-auto"
+              style={{ height: 300 }}
+              src="../images/dummy.svg"
+              alt="thumbnail"
+            />
+          )}
+
           <Card.Body className="px-3 px-md-5">
             {/* <p className={styles.date}>2020年5月30日</p> */}
             <Card.Title className={styles.title}>

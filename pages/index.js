@@ -197,7 +197,16 @@ export default function Home() {
                     </Card.Body>
                   </div>
                   <div className="col-md-4">
-                    <img src="images/dummy.svg" className="card-img" alt="" />
+                    {article.field.image_url &&
+                    !article.field.image_url.includes("drive") ? (
+                      <img
+                        src={article.field.image_url}
+                        className="card-img"
+                        alt=""
+                      />
+                    ) : (
+                      <img src="images/dummy.svg" className="card-img" alt="" />
+                    )}
                   </div>
                 </div>
               </Card>
